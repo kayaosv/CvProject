@@ -1,0 +1,5 @@
+export const ATS_CONFIG = {
+  KEYWORDS_MIN: 3,
+  MAX_PUESTO_LENGTH: 60,
+  DATE_FORMAT: 'MM-YYYY'
+}
