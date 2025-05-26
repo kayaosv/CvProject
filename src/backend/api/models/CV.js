@@ -33,7 +33,7 @@ const cvSchema = new mongoose.Schema(
       required: [true, 'Seleccione al menos 3 habilidades'],
       validate: {
         validator: (v) => v.length >= 5,
-        message: 'Minimo 3 habilidades'
+        message: 'Minimo 5 habilidades'
       }
     },
 

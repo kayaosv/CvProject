@@ -12,14 +12,22 @@ export const crearCV = async (req, res) => {
       })
     }
 
-    const newCV = newCV({
+    const newCV = new CV({
       usuario: req.body.usuario,
       informacionBasica: {
         nombre: req.body.informacionBasica.nombre,
+        apellido: req.body.informacionBasica.apellido,
         email: req.body.informacionBasica.email,
         telefono: req.body.informacionBasica.telefono || null
       },
-      experiencia: req.body.experiencia || [],
+      experiencia: {
+        puesto: req.body.experiencia.puesto,
+        empresa: req.body.experiencia.empresa,
+        descripcion: req.body.experiencia.descripcion,
+        fechaInicio: req.body.experiencia.fechaInicio,
+        fechaFin: req.body.experiencia.fechaFin
+      },
+      // experiencia: req.body.experiencia || [],
       educacion: req.body.educacion || [],
       habilidades: req.body.habilidades || []
     })
