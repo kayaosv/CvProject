@@ -2,6 +2,7 @@ import { FileText } from 'lucide-react'
 import React from 'react'
 import NavBar from './navbar/NavBar'
 import Button from '../ui/Button'
+import { NavLink } from 'react-router-dom'
 
 const Header = () => {
   return (
@@ -12,7 +13,10 @@ const Header = () => {
           <span>CVOptimizer</span>
         </div>
         <NavBar />
+        <NavLink to='/login'>
         <Button>Iniciar sesion</Button>
+        </NavLink>
+        
       </div>
     </header>
   )
